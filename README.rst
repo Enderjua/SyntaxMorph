@@ -11,7 +11,7 @@ SyntaxMorph
 SyntaxMorph is a module that aims to facilitate the conversion between programming languages by utilizing OpenAI.
 
 -  Free software: GPLv3 license
--  Gitgub: https://github.com/Enderjua/SyntaxMorph
+-  Github: https://github.com/Enderjua/SyntaxMorph
 
 
 
