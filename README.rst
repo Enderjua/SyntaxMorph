@@ -1,4 +1,4 @@
-syntaxmorph
+SyntaxMorph
 ========
 
 |Downloads| |Latest Version| |Build Status| |Documentation Status|
