@@ -9,9 +9,6 @@ except ImportError:
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read().replace('.. :changelog:', '')
-
 packages = set(open("requirements.txt", "r").read().splitlines())
 
 requirements = filter(lambda x: "http" not in x, packages)
@@ -27,7 +24,7 @@ setup(
     author="Marijua",
     author_email="enderjua@gmail.com",
     description="SyntaxMorph is a Python module that enables code conversion between different programming languages",
-    long_description=readme + '\n\n' + history,
+    long_description=readme + '\n\n',
     url='https://github.com/Enderjua/SyntaxMorph',
     packages = ['morph'],
     include_package_data=True,
