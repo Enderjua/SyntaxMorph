@@ -5,7 +5,7 @@ SyntaxMorph
 
 .. |Downloads| image:: https://img.shields.io/pypi/dd/syntaxmorph
    :target: https://img.shields.io/pypi/dd/syntaxmorph
-.. |Latest Version| image:: https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&r=r&type=6e&v=1.0.2.0&x2=0
+.. |Latest Version| image:: https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&r=r&type=6e&v=1.0.3&x2=0
    :target: https://pypi.python.org/pypi/syntaxmorph
 
 SyntaxMorph is a module that aims to facilitate the conversion between programming languages by utilizing OpenAI.
@@ -23,6 +23,18 @@ Features
 -  Converting the given code to the desired programming language.
 -  Aiming to collect a comprehensive dataset.
 -  Eliminating the dependency on OpenAI.
+
+Versions
+========
+
+1.0.3
+~~~~~~~~
+-  Folder error resolved and published
+
+1.0.2
+~~~~~~~~
+-  Published.
+
 
 Developer
 ~~~~~~~~~
