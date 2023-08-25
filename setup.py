@@ -4,25 +4,25 @@
 from setuptools import setup, find_packages
 
 
+import os
+
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 
 setup(
     name="SyntaxMorph",
-    version="1.0.2",
+    version="1.0.5",
     author="Marijua",
     author_email="enderjua@gmail.com",
     description="SyntaxMorph is a Python module that enables code conversion between different programming languages",
     long_description="""SyntaxMorph
+SyntaxMorph
 ========
-
-|Downloads| |Latest Version| |Build Status| |Documentation Status|
-
-.. |Downloads| image:: https://img.shields.io/pypi/dd/syntaxmorph
-   :target: https://img.shields.io/pypi/dd/syntaxmorph
-.. |Latest Version| image:: https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&r=r&type=6e&v=1.0.0&x2=0
-   :target: https://pypi.python.org/pypi/syntaxmorph
 
 SyntaxMorph is a module that aims to facilitate the conversion between programming languages by utilizing OpenAI.
 
@@ -40,6 +40,26 @@ Features
 -  Aiming to collect a comprehensive dataset.
 -  Eliminating the dependency on OpenAI.
 
+Versions
+========
+
+1.0.5
+~~~~~~~~
+-  Folder error resolved and published
+
+1.0.4
+~~~~~~~~
+-  Folder error resolved and published
+
+1.0.3
+~~~~~~~~
+-  Folder error resolved and published
+
+1.0.2
+~~~~~~~~
+-  Published.
+
+
 Developer
 ~~~~~~~~~
 
@@ -49,7 +69,6 @@ Developer
 Quick Tutorial
 --------------
 
-.. code:: python
 
     import openai
    
@@ -63,7 +82,7 @@ Quick Tutorial
 Language Detection
 ~~~~~~~~~~~~~~~~~~
 
-.. code:: python
+
 
 
     code = " print('hello world') "
@@ -71,7 +90,6 @@ Language Detection
     print("Language Detected: "+languageDetection) # Python
 
 
-.. parsed-literal::
 
     Language Detected: Python
     
@@ -80,7 +98,7 @@ Language Detection
 Colum Detection
 ~~~~~~~~~~~~
 
-.. code:: python
+
 
     code = " def main(a, b, c):
     
@@ -92,17 +110,17 @@ Colum Detection
      print("Colum Detected: "+columDetection) # Function && Fonksiyon
 
 
-.. parsed-literal::
+
 
     Colum Detected: Fonksiyon
 
 
-.. code:: python
+
 
     print(columDetect.columDetect(code))
 
 
-.. parsed-literal::
+
 
     Function && Fonksiyon
 
@@ -110,7 +128,7 @@ Colum Detection
 Language translation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: python
+
 
     code = " print('hello world') "
     
@@ -120,7 +138,7 @@ Language translation
     
 
 
-.. parsed-literal::
+
 
     #include <iostream>
 
@@ -135,7 +153,7 @@ Create a function for Flask API
 
 main.py:
 
-.. code:: python
+
 
     import openai
     openai.api_key = "YOUR_API_KEY"
@@ -154,7 +172,7 @@ main.py:
     # print(code)
 
 
-.. parsed-literal::
+
 
     #include <iostream>
 
@@ -167,7 +185,7 @@ main.py:
 Create a Flask API
 ~~~~~~~~~~~~~~~~~~~~
 
-.. code:: python
+
 
     from flask import Flask, jsonify
     from flask_cors import CORS
@@ -187,7 +205,7 @@ Create a Flask API
     
 
 
-.. parsed-literal::
+
 
     localhost:5000/translateAPI/C++/print('hello world')
     
@@ -207,14 +225,17 @@ Future
 -  We will ensure the independence of OpenAI.
 
 
+
+
  """,
     long_description_content_type='text/markdown',
     url='https://github.com/Enderjua/SyntaxMorph',
     packages=find_packages(),
+    package_data={'morph': ['columDetect.py', 'formatCode.py', 'languageDetect.py', 'main.py', 'translate.py']},  # Bu satırı ekleyin
     license="GPLv3",
     zip_safe=False,
     keywords='morph, syntax, python, syntaxmorph, ai, machinelearning, change, codexchange',
-    install_requires=["openai"],
+    install_requires=["openai", "black"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
