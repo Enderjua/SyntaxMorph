@@ -59,9 +59,9 @@ Quick Tutorial
    
     openai.api_key = "YOUR_API_KEY"
 
-    from morph.formatCode import formatCode
-    from morph.columDetect import columDetect
-    from morph.languageDetect import languageDetect
+    from morph import formatCode
+    from morph import columDetect
+    from morph import languageDetect
     
     
 Language Detection
